@@ -5,7 +5,7 @@ import Hotels from './pages/hotels';
 
 export default function App() {
   return (
-    <div className="App container m-auto bg-slate-500">
+    <div className="App ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hotels" element={<Hotels />} />
