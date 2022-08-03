@@ -1,10 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'navbar-darkBlue': '#003580',
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [require('@tailwindcss/forms')],
+  corePlugins: {
+    // due to https://github.com/tailwindlabs/tailwindcss/issues/6602 - buttons disappear
+    preflight: true,
+  },
+};
