@@ -30,7 +30,7 @@ export default function HeaderSearch() {
   };
 
   return (
-    <div className="HeaderSearch h-[60px] w-full container bg-white flex items-center justify-around border-4 rounded-md border-yellow-500 absolute -bottom-[30px]">
+    <div className="HeaderSearch h-[60px] w-full container  max-w-7xl mx-auto bg-white flex items-center justify-around border-4 rounded-md border-yellow-500 absolute -bottom-[30px] z-20">
       <div className="HeaderSearchItem flex justify-center items-center gap-2">
         <BedIcon className="text-gray-500" />
         <input

@@ -5,33 +5,35 @@ import HeaderSearch from './atoms/header-search';
 export default function Header({ type }) {
   return (
     <div className="Header-Wrapper bg-navbar-darkBlue text-white flex justify-center relative">
-      <div
-        className={`${
-          type === 'list'
-            ? 'headerContainer container mx-auto mt-5 mb-0'
-            : 'headerContainer container mx-auto mt-5 mb-28'
-        } `}
-      >
-        <div className="headerList flex gap-8 mb-[50px] ">
-          {iconsForHeader.map(({ icon, name, active, id }) => (
-            <Icon key={id} Icon={icon} name={name} active={active} />
-          ))}
+      <div className="container mx-auto">
+        <div
+          className={`${
+            type === 'list'
+              ? 'headerContainer container max-w-7xl mx-auto mt-5 mb-0'
+              : 'headerContainer container  max-w-7xl mx-auto mt-5 mb-28'
+          } `}
+        >
+          <div className="headerList flex gap-8 mb-[50px] ">
+            {iconsForHeader.map(({ icon, name, active, id }) => (
+              <Icon key={id} Icon={icon} name={name} active={active} />
+            ))}
+          </div>
+          {type !== 'list' && (
+            <>
+              <h1 className="headerTitle font-semibold text-4xl">
+                A lifetime of discounts? It's Genius.
+              </h1>
+              <p className="headerDesc my-5 mx-0">
+                Get rewarded for your travels – unlock instant savings of 10% or
+                more with a free Lamabooking account
+              </p>
+              <button className="login  bg-white w-36  text-black  p-3  rounded-sm font-medium text-xs leading-tight uppercase  hover:shadow-md">
+                Sign in / Register
+              </button>
+              <HeaderSearch />
+            </>
+          )}
         </div>
-        {type !== 'list' && (
-          <>
-            <h1 className="headerTitle font-semibold text-4xl">
-              A lifetime of discounts? It's Genius.
-            </h1>
-            <p className="headerDesc my-5 mx-0">
-              Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
-            </p>
-            <button className="login  bg-white w-36  text-black  p-3  rounded-sm font-medium text-xs leading-tight uppercase  hover:shadow-md">
-              Sign in / Register
-            </button>
-            <HeaderSearch />
-          </>
-        )}
       </div>
     </div>
   );
