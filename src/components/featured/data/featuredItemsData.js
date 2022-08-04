@@ -1,0 +1,51 @@
+export const featured_Data = [
+  {
+    id: 1,
+    src: 'https://cf.bstatic.com/xdata/images/city/max500/957801.webp?k=a969e39bcd40cdcc21786ba92826063e3cb09bf307bcfeac2aa392b838e9b7a5&o=',
+    alt: 'Tree House',
+    propertyName: 'Dublin',
+    properties: 124,
+  },
+  {
+    id: 2,
+    src: 'https://cf.bstatic.com/xdata/images/city/max500/690334.webp?k=b99df435f06a15a1568ddd5f55d239507c0156985577681ab91274f917af6dbb&o=',
+    alt: 'Tree House',
+    propertyName: 'Dublin',
+    properties: 124,
+  },
+  {
+    id: 3,
+    src: 'https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o=',
+    alt: 'Tree House',
+    propertyName: 'Dublin',
+    properties: 124,
+  },
+  // {
+  //   id: 4,
+  //   src: 'https://images.unsplash.com/photo-1564013434775-f71db0030976?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+  //   alt: 'Tree House',
+  //   propertyName: 'Dublin',
+  //   properties: 124,
+  // },
+  // {
+  //   id: 5,
+  //   src: 'https://images.unsplash.com/photo-1564013434775-f71db0030976?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+  //   alt: 'Tree House',
+  //   propertyName: 'Dublin',
+  //   properties: 124,
+  // },
+  // {
+  //   id: 6,
+  //   src: 'https://images.unsplash.com/photo-1564013434775-f71db0030976?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+  //   alt: 'Tree House',
+  //   propertyName: 'Dublin',
+  //   properties: 124,
+  // },
+  // {
+  //   id: 7,
+  //   src: 'https://images.unsplash.com/photo-1564013434775-f71db0030976?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+  //   alt: 'Tree House',
+  //   propertyName: 'Dublin',
+  //   properties: 124,
+  // },
+];
