@@ -2,7 +2,20 @@ import BedIcon from '@mui/icons-material/Bed';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PersonIcon from '@mui/icons-material/Person';
 
+import { DateRange } from 'react-date-range';
+import { useState } from 'react';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+
 export default function HeaderSearch() {
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: 'selection',
+    },
+  ]);
+
   return (
     <div className="HeaderSearch h-[60px] w-full container bg-white flex items-center justify-around border-4 rounded-md border-yellow-500 absolute -bottom-[30px]">
       <div className="HeaderSearchItem flex justify-center items-center gap-2">
@@ -17,6 +30,14 @@ export default function HeaderSearch() {
       <div className="HeaderSearchItem flex justify-center items-center gap-2 cursor-pointer">
         <CalendarMonthIcon className="text-gray-500" />
         <span className="text-gray-500">Date to Date</span>
+        <DateRange
+          editableDateInputs={true}
+          onChange={(item) => setDate([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={date}
+          className="DateRange absolute top-0"
+        />
+        ;
       </div>
 
       <div className="HeaderSearchItem flex justify-center items-center gap-2 cursor-pointer">

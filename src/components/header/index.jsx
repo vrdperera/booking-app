@@ -4,7 +4,7 @@ import HeaderSearch from './atoms/header-search';
 
 export default function Header() {
   return (
-    <div className="Header-Wrapper  bg-navbar-darkBlue text-white flex justify-center relative">
+    <div className="Header-Wrapper bg-navbar-darkBlue text-white flex justify-center relative">
       <div className="headerContainer container mx-auto mt-5 mb-28 ">
         <div className="headerList flex gap-8 mb-[50px] ">
           {iconsForHeader.map(({ icon, name, active, id }) => (
