@@ -4,7 +4,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import { format } from 'date-fns';
 
 import { DateRange } from 'react-date-range';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import SearchItemOpt from './search-item-opt';
