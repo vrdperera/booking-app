@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
   return (
     <div className="Navbar-Wrapper h-[50px] bg-navbar-darkBlue  flex justify-center">
       <div className="navbarContainer container mx-auto text-white flex items-center justify-between">
         <span className="navbarWordmark font-semibold text-3xl">
-          Booking BB
+          <Link to="/">Booking BB</Link>
         </span>
         <div className="navLoginRegisterBtns flex gap-3">
           <button className="signup bg-white w-24 text-black px-4 py-2 rounded-sm font-medium text-xs leading-tight uppercase hover:shadow-md">
