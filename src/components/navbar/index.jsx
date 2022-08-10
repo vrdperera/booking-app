@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div className="Navbar-Wrapper h-[50px] bg-navbar-darkBlue  flex justify-center">
       <div className="container mx-auto">
-        <div className="navbarContainer container max-w-7xl mx-auto text-white flex items-center justify-between">
+        <div className="navbarContainer h-full container max-w-7xl mx-auto text-white flex items-center justify-between">
           <span className="navbarWordmark font-semibold text-3xl">
             <Link to="/">Booking BB</Link>
           </span>
