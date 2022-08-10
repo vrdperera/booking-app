@@ -8,6 +8,7 @@ import { useState } from 'react';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import SearchItemOpt from './search-item-opt';
+import { useNavigate } from 'react-router-dom';
 
 export default function HeaderSearch() {
   const [openDate, setOpenDate] = useState(false);
@@ -21,12 +22,19 @@ export default function HeaderSearch() {
 
   const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({ Adults: 1, Children: 0, Room: 1 });
+  const [destination, setDestination] = useState('');
 
   const handleOption = (name, operation) => {
     setOptions((prev) => ({
       ...prev,
       [name]: operation === 'i' ? options[name] + 1 : options[name] - 1,
     }));
+  };
+
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate('/hotels', { state: { destination } });
   };
 
   return (
@@ -37,6 +45,7 @@ export default function HeaderSearch() {
           type="text"
           placeholder="Where are you going?"
           className="border-gray-400 text-black border-transparent focus:border-transparent focus:ring-0"
+          onChange={({ target: { value } }) => setDestination(value)}
         />
       </div>
 
@@ -92,7 +101,10 @@ export default function HeaderSearch() {
       </div>
 
       <div className="HeaderSearchItem cursor-pointer">
-        <button className="login  bg-[#0071c2] w-36  text-white  p-3  rounded-sm font-medium text-xs leading-tight uppercase  hover:shadow-md">
+        <button
+          onClick={handleSearch}
+          className="login  bg-[#0071c2] w-36  text-white  p-3  rounded-sm font-medium text-xs leading-tight uppercase  hover:shadow-md"
+        >
           Search
         </button>
       </div>
