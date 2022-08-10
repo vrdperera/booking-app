@@ -5,6 +5,7 @@ import PropertyList from '../../components/propertyList';
 import FeaturedProperties from '../../components/featuredProperties';
 import { imgData } from '../../components/propertyList/data';
 import { propertiesimgDataPro } from '../../components/featuredProperties/data';
+import MailList from '../../components/mailList';
 
 export default function Home() {
   return (
@@ -43,6 +44,13 @@ export default function Home() {
                 comment={prop.comment}
               />
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="w-full bg-[#003580] ">
+        <div className="container mx-auto">
+          <div className="w-full max-w-7xl mx-auto">
+            <MailList />
           </div>
         </div>
       </div>
