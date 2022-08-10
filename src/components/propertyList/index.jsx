@@ -1,62 +1,16 @@
-export default function PropertyList() {
+export default function PropertyList({ imgLink, alt, name, num }) {
   return (
-    <div className="max-w-7xl mx-auto ">
-      <div className="pList w-full container flex justify-between gap-5 ">
-        <div className="pListItem flex-1 hover:scale-105 transform transition duration-300 ease-out rounded-lg overflow-hidden cursor-pointer">
-          <img
-            src="https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o="
-            alt=""
-            className="pListImg w-full h-[200px] object-cover"
-          />
-          <div className="pListTitles">
-            <h1 className="text-xl font-bold">Hotels</h1>
-            <h2 className="text-lg font-bold">233 hotels</h2>
-          </div>
-        </div>
-        <div className="pListItem flex-1 hover:scale-105 transform transition duration-300 ease-out rounded-lg overflow-hidden cursor-pointer">
-          <img
-            src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-apartments_300/9f60235dc09a3ac3f0a93adbc901c61ecd1ce72e.jpg"
-            alt=""
-            className="pListImg w-full h-[200px] object-cover"
-          />
-          <div className="pListTitles">
-            <h1 className="text-xl font-bold">Apartments</h1>
-            <h2 className="text-lg font-bold">233 hotels</h2>
-          </div>
-        </div>
-        <div className="pListItem flex-1 hover:scale-105 transform transition duration-300 ease-out rounded-lg overflow-hidden cursor-pointer">
-          <img
-            src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg"
-            alt=""
-            className="pListImg w-full h-[200px] object-cover"
-          />
-          <div className="pListTitles">
-            <h1 className="text-xl font-bold">Resorts</h1>
-            <h2 className="text-lg font-bold">233 hotels</h2>
-          </div>
-        </div>
-        <div className="pListItem flex-1 hover:scale-105 transform transition duration-300 ease-out rounded-lg overflow-hidden cursor-pointer">
-          <img
-            src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-villas_300/dd0d7f8202676306a661aa4f0cf1ffab31286211.jpg"
-            alt=""
-            className="pListImg w-full h-[200px] object-cover"
-          />
-          <div className="pListTitles">
-            <h1 className="text-xl font-bold">Villas</h1>
-            <h2 className="text-lg font-bold">233 hotels</h2>
-          </div>
-        </div>
-        <div className="pListItem flex-1 hover:scale-105 transform transition duration-300 ease-out rounded-lg overflow-hidden cursor-pointer">
-          <img
-            src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-chalet_300/8ee014fcc493cb3334e25893a1dee8c6d36ed0ba.jpg"
-            alt=""
-            className="pListImg w-full h-[200px] object-cover"
-          />
-          <div className="pListTitles">
-            <h1 className="text-xl font-bold">cabins</h1>
-            <h2 className="text-lg font-bold">233 hotels</h2>
-          </div>
-        </div>
+    <div className="pListItem rounded-lg cursor-pointer">
+      <div className="pListImg min-w-[260px] min-h-[240px] hover:scale-105 transform transition duration-300 ease-out">
+        <img
+          src={imgLink}
+          alt={alt}
+          className="pListImg w-[260px] h-[240px] object-cover"
+        />
+      </div>
+      <div className="pListTitles">
+        <h1 className="text-xl font-bold">{name}</h1>
+        <h2 className="text-lg font-bold">{num}</h2>
       </div>
     </div>
   );
