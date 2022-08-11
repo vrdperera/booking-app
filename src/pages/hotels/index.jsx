@@ -4,6 +4,7 @@ import { DateRange } from 'react-date-range';
 import { useLocation } from 'react-router-dom';
 import Header from '../../components/header';
 import Navbar from '../../components/navbar';
+import SearchItem from '../../components/searchItem';
 
 export default function Hotels() {
   const { state } = useLocation();
@@ -19,7 +20,7 @@ export default function Hotels() {
       <Header type="list" />
       <div className="hListContainer container mx-auto flex justify-center mt-[20px]">
         <div className="hListWrapper w-full max-w-7xl mx-auto flex gap-[20px]">
-          <div className="hListSearch flex-1  bg-[#febb02] p-[10px] rounded-sm sticky top-3">
+          <div className="hListSearch flex-1  bg-[#febb02] p-[10px] rounded-sm sticky top-3 h-max">
             <h1 className="hlTitle text-2xl text-gray-700 mb-[10px]">Search</h1>
 
             <div className="hlitem ">
@@ -110,7 +111,13 @@ export default function Hotels() {
           </div>
 
           <div className="hListResult flex-3">
-            <h1 className="hlTitle text-2xl">Results</h1>
+            <h1 className="hlTitle">
+              <SearchItem />
+              <SearchItem />
+              <SearchItem />
+              <SearchItem />
+              <SearchItem />
+            </h1>
           </div>
         </div>
       </div>
