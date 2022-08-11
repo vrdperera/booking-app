@@ -34,7 +34,7 @@ export default function HeaderSearch() {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    navigate('/hotels', { state: { destination } });
+    navigate('/hotels', { state: { destination, date, options } });
   };
 
   return (
@@ -54,7 +54,7 @@ export default function HeaderSearch() {
         <span
           onClick={() => setOpenDate((prev) => !prev)}
           className="text-gray-500"
-        >{`${format(date[0].startDate, 'MM/dd/yyyy')} to  ${format(
+        >{`${format(date[0].startDate, 'MM/dd/yyyy')} to ${format(
           date[0].endDate,
           'MM/dd/yyyy'
         )} `}</span>
@@ -64,6 +64,7 @@ export default function HeaderSearch() {
             onChange={(item) => setDate([item.selection])}
             moveRangeOnFirstSelection={false}
             ranges={date}
+            minDate={new Date()}
             className="DateRange absolute top-[50px]"
           />
         )}
