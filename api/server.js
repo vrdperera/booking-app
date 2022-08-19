@@ -6,15 +6,15 @@ import { app } from './app.js';
 
 const db = mongoose.connection;
 
-const DB_URI = process.env.DB_URI.replace(
+const MongoDB = process.env.DB_URI.replace(
   '<password>',
   process.env.DB_PASSWORD
 );
 
 const mongooseConnect = async () => {
   try {
-    await mongoose.connect(DB_URI);
-    console.log('db connection successfully established!');
+    await mongoose.connect(MongoDB);
+    console.log('mongoose connection successfully established!');
   } catch (error) {
     throw error;
   }
