@@ -1,6 +1,6 @@
 import express from 'express';
+import authRoute from './routes/auth.js';
+
 export const app = express();
 
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'success' });
-});
+app.use('/api/auth', authRoute);
