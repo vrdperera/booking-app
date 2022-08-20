@@ -6,6 +6,9 @@ import roomsRoute from './routes/rooms.js';
 
 export const app = express();
 
+// middlewares
+app.use(express.json());
+
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);

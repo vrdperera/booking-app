@@ -25,7 +25,11 @@ const HotelSchema = new Schema({
   photos: {
     type: [String],
   },
-  desc: {
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
     type: String,
     required: true,
   },
