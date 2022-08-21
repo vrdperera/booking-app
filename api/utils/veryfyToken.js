@@ -24,3 +24,14 @@ export function veryfyUser(req, res, next) {
   };
   veryfyToken(req, res, cbNext);
 }
+
+export function veryfyAdmin(req, res, next) {
+  const cbNext = () => {
+    if (req.user.isAdmin) {
+      next();
+    } else {
+      return next(createError(403, 'You are not authorized!'));
+    }
+  };
+  veryfyToken(req, res, cbNext);
+}
