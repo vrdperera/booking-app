@@ -22,7 +22,7 @@ export function veryfyUser(req, res, next) {
       return next(createError(403, 'You are not authorized!'));
     }
   };
-  veryfyToken(req, res, cbNext);
+  veryfyToken(req, res, next, cbNext);
 }
 
 export function veryfyAdmin(req, res, next) {
